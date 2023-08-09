@@ -1,0 +1,11 @@
+[Unit]
+Description=qBOP
+After=network.target
+
+[Service]
+ExecStart=ruby /scripts/qbop/qbop.ruby
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=default.target
