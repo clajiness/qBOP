@@ -3,7 +3,10 @@ Description=qBOP
 After=network.target
 
 [Service]
-ExecStart=ruby /scripts/qbop/qbop.ruby
+User=user
+Group=user
+WorkingDirectory=/home/user/scripts/qBOP
+ExecStart=/usr/share/rvm/rubies/ruby-3.2.2/bin/ruby qbop.rb
 Type=simple
 Restart=always
 

@@ -1,1 +1,4 @@
 config.yml
+log/*.log
+.nova/
+.DS_Store

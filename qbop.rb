@@ -7,10 +7,17 @@ require 'logger'
 Dir["./service/*.rb"].each { |file| require_relative file }
 
 # version number of qBop
-script_version = "0.1.0"
+# get config
+def parse_version
+  if File.exist?("version.yml")
+    YAML.load_file("version.yml")
+  end
+end
+
+script_version = parse_version["version"]
 
 # LOGGER
-@logger = Logger.new("log/#{Time.new.strftime('%FT%R')}.log", 10, 1_024_000)
+@logger = Logger.new("log/qbop.log", 10, 1_024_000)
 @logger.info("starting qBop v#{script_version}")
 
 def exit_script
