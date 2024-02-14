@@ -9,7 +9,7 @@ This tool helps automate port forwarding from ProtonVPN to qBittorrent via OPNse
 * Ruby 3+ (tested with 3.2.2)
 * natpmpc (Linux - `apt install natpmpc`) or libnatpmp (Mac - `brew install libnatpmp`)
 * ProtonVPN subscription
-* OPNsense
+* OPNsense - This is the tutorial I used to set up selective routing to ProtonVPN. https://docs.opnsense.org/manual/how-tos/wireguard-selective-routing.html
 * qBittorrent
 
 ## Config
