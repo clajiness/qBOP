@@ -1,7 +1,7 @@
 module Service
   class Proton
     def proton_natpmpc(proton_gateway)
-      `timeout 5 natpmpc -g #{proton_gateway} -a 0 0 udp 60 && natpmpc -g #{proton_gateway} -a 0 0 tcp 60`
+      `timeout 5 natpmpc -a 1 0 udp 60 -g #{proton_gateway} && natpmpc -a 1 0 tcp 60 -g #{proton_gateway}`
     end
 
     def parse_proton_response(proton_response)
